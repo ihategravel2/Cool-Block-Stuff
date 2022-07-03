@@ -1,2 +1,4 @@
 "condition": "t.val = 0;t.y=-1;loop(3,{t.x = -1;loop(3,{t.z = -2;loop(5,{q.block_neighbor_has_any_tag(t.x,t.y,t.z,'creep:chiseled_purpur') ? {t.val=t.val+1;}; t.val==45 ? {return true;}; t.z=t.z+1;}); t.x=t.x+1;}); t.y=t.y+1;});"
 
+okay so the loop(3,{});  would run the {} expression 3 times, so if you change any of the three loop's numbers you can extend, reduce the selected box, then the t.x=-1 is the starting value, it will increase by one every loop run. so if you change that number you change the offset of the selected box. change the tag for what you need and don't forget to change the t.val==45? to the number you want, if you have a 3 by 3 by 3 box there are 27 blocks in there, so you wanna change the 45 to 27.
+the rest can stay as it is
