@@ -1,0 +1,2 @@
+"condition": "t.val = 0;t.y=-1;loop(3,{t.x = -1;loop(3,{t.z = -2;loop(5,{q.block_neighbor_has_any_tag(t.x,t.y,t.z,'creep:chiseled_purpur') ? {t.val=t.val+1;}; t.val==45 ? {return true;}; t.z=t.z+1;}); t.x=t.x+1;}); t.y=t.y+1;});"
+
